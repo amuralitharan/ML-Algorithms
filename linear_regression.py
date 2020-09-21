@@ -3,11 +3,15 @@ import numpy as np
 from matplotlib import pyplot
 
 def load_data():
-	data = np.loadtxt(os.path.join('Data', 'winequality-white.csv'), delimiter=',')
-	X, y = data[1:, 0], data[1:, 1]
+	data = np.genfromtxt(os.path.join('Data', 'winequality-white.csv'), delimiter=';')
+	X, y = data[:, :11], data[:, 11:]
+	print(y.shape)
 
-	m = y.size 
-	print(y.size())
+def cost():
+
+def gradient_descent():
+
+def predict:
 
 def main():
 	load_data()
